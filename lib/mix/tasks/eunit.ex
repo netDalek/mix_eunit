@@ -142,6 +142,7 @@ defmodule Mix.Tasks.Eunit do
   defp get_eunit_opts(options, post_config) do
     eunit_opts = options[:eunit_opts] ++ post_config[:eunit_opts]
     maybe_add_formatter(eunit_opts, options[:profile], options[:color] || true)
+    eunit_opts
   end
 
   defp maybe_add_formatter(opts, profile, color) do
