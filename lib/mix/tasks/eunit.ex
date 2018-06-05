@@ -135,7 +135,7 @@ defmodule Mix.Tasks.Eunit do
 
   defp eunit_post_config(existing_config) do
     [erlc_paths: existing_config[:erlc_paths] ++ ["test"],
-     erlc_options: existing_config[:erlc_options] ++ [{:d, :TEST}],
+     erlc_options: existing_config[:erlc_options] ++ [{:d, :TEST}, :debug_info],
      eunit_opts: existing_config[:eunit_opts] || []]
   end
 
